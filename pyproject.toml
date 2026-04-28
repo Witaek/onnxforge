@@ -1,0 +1,28 @@
+[project]
+name = "onnxforge"
+version = "0.1.0"
+description = "Remote ONNX benchmarking system"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools]
+packages = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [
+    "packages/shared/src",
+    "packages/feature_sdk/src",
+    "apps/agent/src",
+    "apps/laptop_client/src",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
