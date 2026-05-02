@@ -12,6 +12,8 @@ packages = []
 dev = [
     "pytest",
     "ruff",
+    "fastapi",
+    "uvicorn"
 ]
 
 [tool.pytest.ini_options]
