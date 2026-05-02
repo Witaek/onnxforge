@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "onnxforge"
 version = "0.1.0"
@@ -12,18 +16,11 @@ packages = []
 dev = [
     "pytest",
     "ruff",
-    "fastapi",
-    "uvicorn"
+    "httpx"
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = [
-    "packages/shared/src",
-    "packages/feature_sdk/src",
-    "apps/agent/src",
-    "apps/laptop_client/src",
-]
 
 [tool.ruff]
 line-length = 100
